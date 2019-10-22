@@ -1,5 +1,7 @@
 ﻿@model CreateViewModel
-
+@{
+	ViewData["Title"] = "Create User";
+}
 <form asp-controller="Home" asp-action="Create" method="post" enctype="multipart/form-data">
 	<div asp-validation-summary="All" class="text-danger"></div>
 	<div class="form-group row">
@@ -43,12 +45,12 @@
 
 	@section Scripts {
 		<script>
-            $(document).ready(function () {
-                $('.custom-file-input').on("change", function () {
-                    var fileName = $(this).val().split("\\").pop();
-                    $(this).next('.custom-file-label').html(fileName);
-                });
-            });
+			$(document).ready(function () {
+				$('.custom-file-input').on("change", function () {
+					var fileName = $(this).val().split("\\").pop();
+					$(this).next('.custom-file-label').html(fileName);
+				});
+			});
 		</script>
 	}
 </form>
