@@ -1,0 +1,103 @@
+﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
+for details on configuring this project to bundle and minify static web assets. */
+
+a.navbar-brand {
+  white-space: normal;
+  text-align: center;
+  word-break: break-all;
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  font-size: 14px;
+}
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.border-top {
+  border-top: 1px solid #e5e5e5;
+}
+.border-bottom {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.box-shadow {
+  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+button.accept-policy {
+  font-size: 1rem;
+  line-height: inherit;
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+	height: 100%;
+}
+
+	html body {
+		height: 100%;
+		overflow: hidden;
+	}
+
+	html body .container-fluid.body-content {
+		position: absolute;
+		top: 50px;
+		bottom: 30px;
+		right: 0;
+		left: 0;
+		overflow-y: hidden;
+	}
+
+header {
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	background-color: #DCDCDC;
+	height: 50px;
+}
+
+footer {
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: #DCDCDC;
+	height: 30px;
+}
+.imageThumbnail {
+	height: 200px;
+	width: auto;
+}
+.table-fixed {
+	max-width: 980px;
+	table-layout: fixed;
+	margin: auto;
+}
+
+thead, tfoot {
+	background: #f9f9f9;
+	display: table;
+	width: 100%;
+	width: calc(100% - 18px);
+}
+
+tbody {
+	height: 300px;
+	overflow: auto;
+	overflow-x: hidden;
+	display: block;
+	width: 100%;
+}
+
+tbody tr {
+	display: table;
+	width: 100%;
+	table-layout: fixed;
+}

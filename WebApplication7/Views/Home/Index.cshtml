@@ -1,0 +1,50 @@
+﻿@model IEnumerable<Employee>
+@{
+	ViewData["Title"] = "Home Page";
+}
+<link href="~/css/site.css" rel="stylesheet" />
+
+<div class="container">
+
+	
+	<table class="table table-striped table-bordered table-fixed">
+		<thead>
+			<tr class=" bg-primary text-center text-light">
+				<th>Name</th>
+				<th>Email</th>
+				<th>Department</th>
+				<th>Image</th>
+			</tr>
+		</thead>
+		<tbody>
+			@foreach (var employee in Model)
+			{
+				var photoPath = "~/images/" + (employee.PhotoPath ?? "noimage.jpg");
+
+				<tr>
+					<td><a asp-controller="Home" asp-action="Details" asp-route-Id="@employee.Id" data-toggle="tooltip" title="View Employee Details">@employee.Name</a></td>
+					<td>@employee.Email</td>
+					<td>employee.Department</td>
+					<td><img class="card-img-top imageThumbnail" src="@photoPath" asp-append-version="true" /></td>
+				</tr>
+
+			}
+		</tbody>
+		<tfoot>
+			<tr>
+				<td colspan="4">
+					<pager total-items="6" page="@ViewBag.currentPage" link-url="/Home/index" page-size="2"></pager>
+				</td>
+			</tr>
+		</tfoot>
+	</table>
+
+</div>
+@section Scripts {
+	<script>
+		$(document).ready(function () {
+			$('[data-toggle="tooltip"]').tooltip();
+		});
+	</script>
+}
+
